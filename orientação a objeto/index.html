@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="style.css">
+    <script href="script.js"></script>
+    
+</head>
+
+<body>
+
+    <h2>FAQ (Perguntas Frequentes):</h2>
+    <ul>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">Oque é orientação a objetos (OO)</div>
+                <div class="faq-answer">A orientação a objetos (OO) é uma forma de programação que se baseia na ide
+                    Propriedades (atributos) : São como características ou detalhes sobre o objeto. Imagine que você tem
+                    um objeto chamado "carro". Algumas propriedades desse carro podem ser de sua cor, marca e modelo.
+                    Métodos (funções) : São as ações que o objeto
+                    O JavaScript, como muitas outras linguagens de programação, suporta a
+                    Sem JavaScript, um OO
+                    Um exemplo simples em JavaScript seria:
+                    javascript
+
+                    function Carro(marca, modelo, cor) {
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.cor = cor;
+                    this.ligar = function() {
+                    console.log("Vrumm!");
+                    };
+                    }
+
+                    const meuCarro = new Carro("Toyota", "Corolla", "Azul");
+                    console.log(meuCarro.cor); // Retorna "Azul"
+                    meuCarro.ligar(); // Exibe "Vrumm!"
+                </div>
+                </li>
+            </div>
+        </div>
+    </ul>
+    <script>
+        // JavaScript para implementar a funcionalidade de acordeão
+        document.addEventListener('DOMContentLoaded', function () {
+            let faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    let answer = this.querySelector('.faq-answer');
+                    if (answer.style.display === "none") {
+                        answer.style.display = "block";
+                    } else {
+                        answer.style.display = "none";
+                    }
+                });
+            });
+        });
+        // Obtém o botão por ID
+        const meuBotao = document.getElementById("meuBotao");
+
+        // Adiciona um ouvinte de evento para o clique no botão
+        meuBotao.addEventListener("click", function () {
+            // Exibe um alerta quando o botão é clicado
+            alert("   Terapia Ocupacional: A terapia ocupacional ajuda as pessoas com deficiência física motora a desenvolver habilidades para realizar atividades cotidianas de forma independente. Essa terapia envolve treinamento de autocuidado, adaptação de ambientes, utilização de equipamentos assistivos e atividades que melhoram a coordenação, mobilidade e destreza. Os benefícios da terapia ocupacional incluem maior independência funcional, melhora na qualidade de vida e autonomia nas atividades diárias. 3. Hidroterapia: A hidroterapia é uma terapia que utiliza a água como meio para promover a reabilitação física. A água ajuda a reduzir o impacto nas articulações e oferece resistência suave, permitindo que os pacientes realizem exercícios de forma mais fácil. Os benefícios da hidroterapia incluem melhora da força, flexibilidade, equilíbrio e coordenação motora, além de alívio da dor e relaxamento muscular.            4. Equoterapia: A equoterapia é uma terapia que utiliza cavalos como meio de reabilitação. O movimento tridimensional do cavalo estimula o equilíbrio, coordenação, força muscular e postura dos pacientes. Além disso, o contato com o animal pode proporcionar benefícios emocionais, aumentar a autoestima e motivar os pacientes a se engajarem na terapia. Os benefícios da equoterapia incluem melhora da postura, do equilíbrio, da coordenação motora e do autocontrole emocional.");
+        });
+
+    </script>
+
+    <div class="container mt-5">
+        <h2>Formulário de Pesquisa</h2>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome">
+        </div>
+        <div class="form-group">
+            <label for="idade">Idade:</label>
+            <input type="text" class="form-control" id="idade">
+        </div>
+        <div class="form-group">
+            <label for="nacionalidade">Nacionalidade:</label>
+            <input type="text" class="form-control" id="nacionalidade">
+        </div>
+        <button class="btn btn-primary" onclick="displayValues()">Enviar</button>
+
+        <div id="results" style="display:none; margin-top:20px;">
+            <h4>Resultados:</h4>
+            <p>Nome: <span id="displayNome"></span></p>
+            <p>Idade: <span id="displayIdade"></span></p>
+            <p>Nacionalidade: <span id="displayNacionalidade"></span></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function displayValues() {
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const nacionalidade = document.getElementById('nacionalidade').value;
+
+            // Exibindo os valores na seção de resultados
+            document.getElementById('displayNome').textContent = nome;
+            document.getElementById('displayIdade').textContent = idade;
+            document.getElementById('displayNacionalidade').textContent = nacionalidade;
+
+            // Mostrando a seção de resultados
+            document.getElementById('results').style.display = 'block';
+        }
+    </script>
+    
+</body>
+
+</html>
