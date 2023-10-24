@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript - Orientação a objetos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+         -->
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+    <div class="container">
+
+
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+
+                    1 parte
+
+                </button>
+
+            </h2>
+
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+
+                <div class="accordion-body">
+
+                    A programação orientada a objetos (POO) é um paradigma de programação que se baseia no conceito de
+                    "objetos",
+
+                    que são instâncias de classes. Ela oferece uma maneira de organizar e estruturar o código de forma
+                    mais
+
+                    modular e reutilizável. Aqui estão alguns conceitos-chave da programação orientada a objetos:
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+
+                    2 parte
+
+                </button>
+
+            </h2>
+
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+                <div class="accordion-body">
+
+                    Classes e Objetos: Classes são modelos que definem as características e comportamentos dos objetos.
+                    Objetos
+
+                    são instâncias das classes.Encapsulamento: O encapsulamento permite que os detalhes internos de uma
+                    classe
+
+                    sejam ocultos do mundo exterior, fornecendo interfaces bem definidas para interagir com a
+                    classe.Herança: A
+
+                    herança permite que uma classe herde propriedades e métodos de outra classe, promovendo a
+                    reutilização de
+
+                    código e a criação de hierarquias de classes.Polimorfismo: O polimorfismo permite que objetos de
+                    diferentes
+
+                    classes sejam tratados de maneira uniforme por meio de interfaces comuns, tornando o código mais
+
+                    flexível.Abstração: A abstração envolve a simplificação de objetos e suas características
+                    essenciais,
+
+                    destacando o que é relevante e ocultando o que não é.Métodos e Atributos: Métodos são funções
+                    associadas a
+
+                    objetos, enquanto atributos são variáveis que armazenam dados dentro dos objetos.Mensagens e
+                    Comunicação: Os
+
+                    objetos se comunicam enviando mensagens uns aos outros, o que envolve a invocação de métodos em
+                    objetos.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+
+                    3 parte
+
+                </button>
+
+            </h2>
+
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+                <div class="accordion-body">
+
+                    A POO é amplamente utilizada em muitas linguagens de programação, incluindo Java, C++, Python e C#.
+                    Ela
+
+                    promove a modularidade, reutilização de código, manutenção mais fácil e a modelagem de problemas do
+                    mundo real
+
+                    de forma mais natural. A capacidade de criar objetos com características e comportamentos
+                    específicos torna a
+
+                    POO uma abordagem valiosa para o desenvolvimento de software.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script>
+
+            const accordions = document.querySelectorAll('.accordion-item');
+
+
+
+            accordions.forEach((accordion) => {
+
+                const button = accordion.querySelector('.accordion-button');
+
+                const body = accordion.querySelector('.accordion-body');
+
+                body.style.display = 'none'; // Modificado para iniciar fechado
+
+
+
+                button.addEventListener('click', () => {
+
+                    if (body.style.display === 'block') {
+
+                        body.style.display = 'none';
+
+                    } else {
+
+                        body.style.display = 'block';
+
+                    }
+
+                });
+
+            });
+
+        </script>
+
+        <br>
+
+
+
+
+
+        <div class="container">
+
+            <h1>Exemplo</h1>
+
+            <form id="personForm">
+
+                <input type="text" id="firstName" class="form-control" class="form-label" placeholder="Nome">
+
+                <br>
+
+                <input type="text" id="lastName" class="form-control" class="form-label" placeholder="Sobrenome">
+
+                <br>
+
+                <input type="text" id="language" class="form-control" class="form-label" placeholder="Personalidade">
+
+                <br>
+
+                <button type="submit" class="btn btn-success">Enviar</button>
+
+                <br>
+
+            </form>
+
+
+
+
+
+            <br>
+
+            <div class="display-details">
+
+                <p>Resposta</p>
+
+                <p>Nome: <span id="displayFirstName"></span></p>
+
+                <p>Sobrenome: <span id="displayLastName"></span></p>
+
+                <p>Personalidade: <span id="displayLanguage"></span></p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <footer class="footer">
+
+            rolim265
+
+        </footer>
+
+
+
+
+
+        <script src="script.js"></script>
+
+</body>
+
+
+
+</html>
