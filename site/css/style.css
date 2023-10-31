@@ -1,0 +1,22 @@
+/* Estilo para a imagem grande no topo */
+#main-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc; /* Adicione uma borda se desejar */
+    border-radius: 5px; /* Adicione bordas arredondadas se desejar */
+}
+
+/* Estilo para as imagens menores na parte inferior */
+.bottom-image {
+    max-width: 100%;
+    height: auto;
+    margin: 5px; /* Espaçamento entre as imagens menores */
+    border: 1px solid #ddd; /* Adicione uma borda se desejar */
+    border-radius: 5px; /* Adicione bordas arredondadas se desejar */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar o mouse sobre as imagens */
+}
+
+/* Estilo para realçar a imagem selecionada */
+.bottom-image.selected {
+    border: 2px solid #007bff; /* Cor azul brilhante para a borda da imagem selecionada */
+}
